@@ -1,0 +1,15 @@
+apiVersion: v2
+name: celty
+description: Workflow bundle for kubernetes
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+dependencies:
+  - name: zookeeper
+    version: 11.4.2
+    repository: oci://registry-1.docker.io/bitnamicharts/zookeeper
+    condition: dolphin.enabled,dolphin.zookeeper.deploy.enabled 
+    tags:
+      - dolphin
+
+
